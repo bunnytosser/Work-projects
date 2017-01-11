@@ -1,0 +1,71 @@
+select 
+sum(case when D_BREAK_REASON='1' then 1 else 0 end) REASON1,
+sum(case when D_BREAK_REASON='2' then 1 else 0 end) REASON2,
+sum(case when D_BREAK_REASON='3' then 1 else 0 end) REASON3,
+sum(case when D_BREAK_REASON='4' then 1 else 0 end) REASON4,
+sum(case when D_BREAK_REASON='5' then 1 else 0 end) REASON5,
+sum(case when D_BREAK_REASON='12' then 1 else 0 end) REASON12,
+sum(case when D_BREAK_REASON='13' then 1 else 0 end) REASON13,
+sum(case when D_BREAK_REASON='14' then 1 else 0 end) REASON14,
+sum(case when D_BREAK_REASON='15' then 1 else 0 end) REASON15,
+sum(case when D_BREAK_REASON='23' then 1 else 0 end) REASON23,
+sum(case when D_BREAK_REASON='24' then 1 else 0 end) REASON24,
+sum(case when D_BREAK_REASON='25' then 1 else 0 end) REASON25,
+sum(case when D_BREAK_REASON='34' then 1 else 0 end) REASON34,
+sum(case when D_BREAK_REASON='35' then 1 else 0 end) REASON35,
+sum(case when D_BREAK_REASON='45' then 1 else 0 end) REASON45,
+sum(case when D_BREAK_REASON='123' then 1 else 0 end) REASON123,
+sum(case when D_BREAK_REASON='124' then 1 else 0 end) REASON124,
+sum(case when D_BREAK_REASON='125' then 1 else 0 end) REASON125,
+sum(case when D_BREAK_REASON='134' then 1 else 0 end) REASON134,
+sum(case when D_BREAK_REASON='135' then 1 else 0 end) REASON135,
+sum(case when D_BREAK_REASON='145' then 1 else 0 end) REASON145,
+sum(case when D_BREAK_REASON='234' then 1 else 0 end) REASON234,
+sum(case when D_BREAK_REASON='235' then 1 else 0 end) REASON235,
+sum(case when D_BREAK_REASON='245' then 1 else 0 end) REASON245,
+sum(case when D_BREAK_REASON='345' then 1 else 0 end) REASON345,
+sum(case when D_BREAK_REASON='1234' then 1 else 0 end) REASON1234,
+sum(case when D_BREAK_REASON='1235' then 1 else 0 end) REASON1235,
+sum(case when D_BREAK_REASON='1345' then 1 else 0 end) REASON1345,
+sum(case when D_BREAK_REASON='2345' then 1 else 0 end) REASON2345,
+sum(case when D_BREAK_REASON='12345' then 1 else 0 end) REASON12345,        
+sum(case when D_PKG_REASON='1' then 1 else 0 end) PKGREASON1,
+sum(case when D_PKG_REASON='2' then 1 else 0 end) PKGREASON2,
+sum(case when D_PKG_REASON='3' then 1 else 0 end) PKGREASON3,
+sum(case when D_PKG_REASON='4' then 1 else 0 end) PKGREASON4,
+sum(case when D_PKG_REASON='12' then 1 else 0 end) PKGREASON12,
+sum(case when D_PKG_REASON='13' then 1 else 0 end) PKGREASON13,
+sum(case when D_PKG_REASON='14' then 1 else 0 end) PKGREASON14,
+sum(case when D_PKG_REASON='23' then 1 else 0 end) PKGREASON23,
+sum(case when D_PKG_REASON='24' then 1 else 0 end) PKGREASON24,
+sum(case when D_PKG_REASON='34' then 1 else 0 end) PKGREASON34,
+sum(case when D_PKG_REASON='123' then 1 else 0 end) PKGREASON123,
+sum(case when D_PKG_REASON='124' then 1 else 0 end) PKGREASON124,
+sum(case when D_PKG_REASON='134' then 1 else 0 end) PKGREASON134,
+sum(case when D_PKG_REASON='234' then 1 else 0 end) PKGREASON234,
+sum(case when D_PKG_REASON='1234' then 1 else 0 end) PKGREASON123,
+sum(case when IS_D_PKG_FLAG='1' then 1 else 0 end) PKG1,
+sum(case when IS_D_PKG_FLAG='0' then 1 else 0 end) PKG0,
+sum(case when D_LOSS_STABILITY_1='01' then 1 else 0 end) STB1,
+sum(case when D_LOSS_STABILITY_1='02' then 1 else 0 end) STB2,
+sum(case when D_LOSS_STABILITY_1='03' then 1 else 0 end) STB3,
+sum(case when D_LOSS_STABILITY_1='99' then 1 else 0 end) STB99,
+sum(case when D_LOSS_STABILITY_2='01' then 1 else 0 end) STBD1,
+sum(case when D_LOSS_STABILITY_2='02' then 1 else 0 end) STBD2,
+sum(case when D_LOSS_STABILITY_2='03' then 1 else 0 end) STBD3,
+sum(case when D_LOSS_STABILITY_2='99' then 1 else 0 end) STBD99,
+sum(case when IS_D_BREAK_FLAG='1' then 1 else 0 end) BREAK1,
+sum(case when IS_D_BREAK_FLAG='0' then 1 else 0 end) BREAK0
+ from CL_MODEl_D_LOSS_FLAG1
+         where month_id='201701'
+           and day_id='10'
+           and prov_id='076'
+           
+           
+select * from CL_MODEL_OUTPUT_PROV  where month_id='201612' 
+
+select * from CL_MODEl_D_LOSS_FLAG1
+select *
+  from SQLPARSER_LOG_GENERAL
+ where PROG_NAME = 'P_CL_MODEl_D_LOSS_FLAG'
+   and begin_time > to_date('20170109', 'yyyymmdd');
