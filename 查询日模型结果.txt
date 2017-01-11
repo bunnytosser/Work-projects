@@ -69,3 +69,10 @@ select *
   from SQLPARSER_LOG_GENERAL
  where PROG_NAME = 'P_CL_MODEl_D_LOSS_FLAG'
    and begin_time > to_date('20170109', 'yyyymmdd');
+
+select * from CL_MODEl_D_LOSS_FLAG1
+
+select *
+  from SQLPARSER_LOG_GENERAL
+ where PROG_NAME = 'P_CL_MODEL_VOICE_D'
+   and begin_time > to_date('20170110', 'yyyymmdd');
