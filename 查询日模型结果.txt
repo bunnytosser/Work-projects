@@ -61,7 +61,7 @@ sum(case when IS_D_BREAK_FLAG='0' then 1 else 0 end) BREAK0
            and day_id='10'
            and prov_id='076'
            
-           
+  ===daily         
 select * from CL_MODEL_OUTPUT_PROV  where month_id='201612' 
 
 select * from CL_MODEl_D_LOSS_FLAG1
